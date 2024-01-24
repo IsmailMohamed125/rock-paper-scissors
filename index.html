@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <script src="main.js"></script>
+    <header class="main-title-container">
+      <button class="reset">Reset game</button>
+      <div class="tc">
+        <h1 class="main-title">ROCK PAPER SCISSORS</h1>
+      </div>
+    </header>
+    <div class="modal hidden">
+      <h2 class="outcome"></h1>
+      <p class="final-result"></p>
+      <button class="close-modal">PLAY AGAIN!</button>
+    </div>
+    <div class="overlay hidden"></div>
+    <main class="game-content">
+      <div class="instructions">
+        <h3 class="result">CHOOSE YOUR MOVE</h3>
+        <p class="explanations">First to 5 wins!</p>
+      </div>
+      <div class="live-game-changes">
+        <div class="choices">
+          <div class="player-choice">
+            <img
+              src="/images/question-mark-svgrepo-com.png"
+              alt="Player choice"
+              class="reveal one"
+            />
+            <p class="choice-description">
+              YOUR CHOICE: <span class="player-description"></span>
+            </p>
+          </div>
+          <div class="computer-choice">
+            <img
+              src="/images/question-mark-svgrepo-com.png"
+              alt="Computer choice"
+              class="reveal two"
+            />
+            <p class="choice-description">
+              COMPUTER CHOICE: <span class="computer-description"></span>
+            </p>
+          </div>
+        </div>
+        <div class="scores">
+          <p class="player-score-label">
+            Player Score: <span class="player-score">0</span>
+          </p>
+          <p class="computer-score-label">
+            Computer Score: <span class="computer-score">0</span>
+          </p>
+        </div>
+      </div>
+      <div class="player-selection">
+        <button id="rock-btn" class="btn">
+          <img src="/images/hand-rock-svgrepo-com.png" class="rock" />
+        </button>
+        <button id="paper-btn" class="btn">
+          <img src="/images/hand-paper-svgrepo-com.png" class="paper" />
+        </button>
+        <button id="scissors-btn" class="btn">
+          <img src="/images/hand-scissors-svgrepo-com.png" class="scissors" />
+        </button>
+      </div>
+    </main>
+    <script src="/main.js"></script>
   </body>
 </html>
